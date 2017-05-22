@@ -25,6 +25,13 @@ var api = new ParseServer({
 
 var app = express();
 
+// Add middlewares to console every request
+// logs the response
+app.use(function(req, res, next) {
+    console.log(req.method, req.url);
+    next();
+});
+
 // Serve static assets from the /public folder
 app.use('/public', express.static(path.join(__dirname, '/public')));
 
