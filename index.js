@@ -18,9 +18,6 @@ var api = new ParseServer({
   appId: process.env.APP_ID || 'myAppId',
   masterKey: process.env.MASTER_KEY || '', //Add your master key here. Keep it secret!
   serverURL: process.env.SERVER_URL || 'http://localhost:1337/parse',  // Don't forget to change to https if needed
-  liveQuery: {
-    classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
-  }
 });
 // Client-keys like the javascript key or the .NET key are not necessary with parse-server
 // If you wish you require them, you can set them as options in the initialization above:
@@ -31,6 +28,8 @@ var app = express();
 // Serve static assets from the /public folder
 app.use('/public', express.static(path.join(__dirname, '/public')));
 
+app.use(express.static('public'));
+
 // Serve the Parse API on the /parse URL prefix
 var mountPath = process.env.PARSE_MOUNT || '/parse';
 app.use(mountPath, api);
@@ -38,7 +37,7 @@ app.use(mountPath, api);
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, '/public/login.html'));
+  res.sendFile(path.join(__dirname, '/public/index.html'));
 });
 
 // There will be a test page available on the /test path of your server url
