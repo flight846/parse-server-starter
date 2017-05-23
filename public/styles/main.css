@@ -1,0 +1,51 @@
+body {
+  margin-top: 30px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  font-size: 12px;
+  font-weight: 100;
+}
+
+li {
+  text-decoration: none;
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.experience {
+
+}
+
+.quote {
+  border-left: 20px solid #757575;
+}
+
+.profile {
+  height: 250px;
+  width: auto;
+}
+
+.thumbnail {
+  text-align: center;
+  height: auto;
+  width: 320px;
+}
+
+i {
+  margin-left: 15px;
+}
+
+#email {
+  margin-top: 30px;
+}
+
+.col-md-4.text-center {
+  min-height: 350px;
+}
