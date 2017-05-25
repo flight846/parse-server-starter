@@ -9,22 +9,24 @@
     <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="styles/main.css" rel="stylesheet">
 </head>
-<body ng-app="App">
+<body ng-app="App" ng-cloak>
 
-    <div ng-view></div>
+    <div ui-view></div>
 
     <script src="app/parse-latest.min.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
-    <script src="bower_components/angular-route/angular-route.min.js"></script>
-    <script src="bower_components/angular-jwt/dist/angular-jwt.min.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="app/app.js"></script>
 
     <!-- controller -->
-    <script src="app/main/main-controller.js"></script>
-    <script src="app/resume/resume-controller.js"></script>
+    <script src="app/home/home-controller.js"></script>
+    <script src="app/login/login-controller.js"></script>
+    <script src="app/signup/signup-controller.js"></script>
+    <script src="app/account/account-controller.js"></script>
     <!-- services -->
-
+    <script src="app/auth/authentication.js"></script>
     <!-- factory -->
 
     <!-- directives -->

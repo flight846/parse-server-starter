@@ -49,3 +49,7 @@ i {
 .col-md-4.text-center {
   min-height: 350px;
 }
+
+.help-block {
+    font-size: 12px;
+}
