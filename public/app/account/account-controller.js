@@ -25,8 +25,10 @@
 
         vm.logout = function () {
             console.log("AccountCtrl::logout");
-            Parse.User.logOut();
-            $state.go('home');
+            Parse.User.logOut()
+                .then(function() {
+                    $state.go('home');
+                });
         };
     }
 })();
